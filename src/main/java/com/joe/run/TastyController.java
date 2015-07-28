@@ -14,7 +14,7 @@ import java.util.List;
 public class TastyController {
 
     ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-    MenuItemService menuService = (MenuItemService) context.getBean("menuItemServiceImpl");
+    MenuItemService menuService = (MenuItemService) context.getBean("menuItemService");
 
     @RequestMapping("/getMenu")
     public List<MenuItemDto> getAllMenuItems() throws Exception {

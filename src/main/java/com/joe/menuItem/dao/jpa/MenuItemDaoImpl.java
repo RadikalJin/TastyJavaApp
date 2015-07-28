@@ -48,10 +48,7 @@ public class MenuItemDaoImpl implements MenuItemDao {
     }
 
     @Override
-    public List<MenuItem> getMenuItemsByDescription(String description) {
-        return em.createQuery(
-                "SELECT a FROM MenuItem a" +
-                "WHERE description = '" + description
-                 + "'", MenuItem.class).getResultList();
+    public List<MenuItem> getMenuItemsByDescription(String descriptionQuery) {
+        return em.createQuery("SELECT a FROM MenuItem a WHERE description = '" + descriptionQuery + "'", MenuItem.class).getResultList();
     }
 }
